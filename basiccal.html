@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<style>
+    .boxcenter {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    input[type="button"] {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        margin: 3px;
+        color: blue;
+    }
+
+    input[type="text"] {
+        width: 87%;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        margin: 3px;
+    }
+</style>
+<body>
+<div class="boxcenter">
+    <h3>Basic Calculator</h3>
+    <input type="text" id="result" disabled>
+    <input type="button" value="1" onclick="anso('1')">
+    <input type="button" value="2" onclick="anso('2')">
+    <input type="button" value="3" onclick="anso('3')">
+    <input type="button" class="operator" value="+" onclick="anso('+')">
+    <input type="button" value="4" onclick="anso('4')">
+    <input type="button" value="5" onclick="anso('5')">
+    <input type="button" value="6" onclick="anso('6')">
+    <input type="button" class="operator" value="-" onclick="anso('-')">
+    <input type="button" value="7" onclick="anso('7')">
+    <input type="button" value="8" onclick="anso('8')">
+    <input type="button" value="9" onclick="anso('9')">
+    <input type="button" class="operator" value="*" onclick="anso('*')">
+    <input type="button" class="operator" value="Clear" onclick="reset()">
+    <input type="button" value="0" onclick="anso('0')">
+    <input type="button" id="lampheptinh" class="operator" value="="
+           onclick="tinhToan()">
+    <input type="button" id="div" class="operator" value="/" onclick="anso('+')">
+</div>
+<script>
+    function anso(so) {
+        document.getElementById('result').value += so
+    }
+
+    function tinhToan() {
+        document.getElementById('result').value = eval(document.getElementById('result').value)
+    }
+
+    function reset() {
+        document.getElementById('result').value = ''
+    }
+</script>
+
+</body>
+</html>
